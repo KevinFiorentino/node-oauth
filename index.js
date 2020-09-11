@@ -6,7 +6,7 @@ const GitHubStrategy = require('passport-github').Strategy
 
 const GITHUB_CLIENT_ID = "6212ae257ed7c43f0d7e";
 const GITHUB_CLIENT_SECRET = "3ed6a6cef35571b0026449918ea70f8fec85bc39";
-const CALLBACK_URL = "http://localhost:3000/auth/github/callback"
+const CALLBACK_URL = process.env.URL_CALLBACK || "http://localhost:3000/auth/github/callback"
 
 
 passport.use(new GitHubStrategy({
